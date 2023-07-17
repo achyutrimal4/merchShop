@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+s
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+#product-title::selection {
+    background-color: var(--primary-purple);
+    color: var(--light-purple);
+}
+
+:root {
+    --box-border: 4px solid black;
+    --box-border-radius: 6px;
+    --primary-purple: #b517e1;
+    --purple: #e563ff;
+    --light-purple: #ee9ffd;
+    --cyan: #70acfe;
+    --yellow: #ffe927;
+    /* --orange */
+}
+
+.text-shadow {
+    --text-shadow: 0.08em;
+    letter-spacing: 0;
+    --text-shadow-x: var(--text-shadow);
+    -webkit-text-stroke: 2px black;
+    text-shadow: var(--text-shadow-x) var(--text-shadow) 0 #000;
+}
+
+.canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvas .container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard {
+    position: relative;
+    margin-top: 2em;
+    padding-bottom: 2em;
+    height: 27em;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--purple);
+    border: var(--box-border);
+    border-radius: var(--box-border-radius);
+}
+
+.dashboard h1 {
+    color: white;
+    font-weight: 900;
+    font-size: 4    rem;
+    margin-left:2%;
+    margin-top: 2%;
+    text-transform: uppercase;
+}
+
+.dashboard .link-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.dashboard .link-container .links{
+    display: flex;
+    margin-top: 2em;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+.dashboard .links #link {
+    text-decoration: none;
+
+    color: white;
+    background-color: var(--yellow);
+    font-size: 3rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 30%;
+    border: var(--box-border);
+    text-align: center;
+    box-shadow: 10px 10px black;
+}
+
+.dashboard #lightburst{
+    margin-top: -30em;
+}
+
+
+/* *ADMIN LOGIN */
+.adminLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: var(--box-border);
+    border-radius: var(--box-border-radius);
+    width: 100%;
+    margin-top: 2em;
+    background-color: var(--purple);
+
+}
+.adminLogin h1{
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+.adminLogin form{
+    /* background-color: red; */
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2em 0;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+.input-group label{
+    font-size: 1.5rem;
+}
+
+.input-group input, .input-group textarea, #btn-submit {
+    font-size: 1.4rem;
+    padding: 0.4em 0.5em;
+    outline: none;
+    border: none;
+    border: var(--box-border);
+    border-radius:var(--box-border-radius);
+    box-shadow: 6px 6px black;
+}
+
+#btn-submit{
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1em;
+    background-color: var(--yellow);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.addproduct-canvas{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--light-purple);
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    padding: 2em;
+    border: var(--box-border);
+    border-radius: var(--box-border-radius);
+}
+.addproduct-canvas h1{
+    color: white;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: 'Anton', 'sans-serif';
+    height: fit-content;
+}
+
+.addproduct-canvas form{
+    margin-top: 2em;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 1.5em;
+}
+
+.input-group[type='checkbox']{
+    width: 2em;
+    height: 2em;
+}
+.row{
+    display: flex;
+    flex-direction: row !important;
+}
